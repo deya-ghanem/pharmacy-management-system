@@ -24,14 +24,47 @@ Each user type will have different permissions according to their responsibiliti
 
 ## Planned Technologies
 
-- Platform: Windows Desktop
-- Programming Language: To be determined
-- GUI Framework: To be determined
-- Database: To be determined
-- Version Control: Git and GitHub
+- **Platform:** Windows Desktop
+- **Programming Language:** To be determined
+- **GUI Framework:** To be determined
+- **Database:** To be determined
+- **Version Control:** Git and GitHub
 
 The initial version will target Windows. The system may be extended to other platforms in future development.
 
+## Planned Features
+
+- Search for medicines by name or barcode.
+- View medicine details, including price, quantity, and expiry date when available.
+- Create sales transactions and calculate the total price.
+- Automatically update inventory after a confirmed sale.
+- Manage medicine records and stock quantities.
+- Provide low-stock and expiry alerts.
+- Generate basic sales and inventory reports.
+
+## Scope
+
+### In Scope
+
+- Windows desktop application.
+- Medicine search and information management.
+- Sales and inventory management.
+- Basic stock alerts and reports.
+
+### Out of Scope
+
+- AI-based demand forecasting.
+- Online pharmacy and e-commerce functionality.
+- External integrations with healthcare systems.
+- Cross-platform support in the initial version.
+
 ## Current Status
 
-Week 1 - Project definition, initial research, and GitHub setup.
+**Week 2 — Requirements Engineering and Planning**
+
+- Defined preliminary functional and non-functional requirements.
+- Identified project scope, constraints, and assumptions.
+- Created initial user stories and acceptance criteria.
+- Created GitHub Issues for requirements documentation, technology comparison, and prototype/data model preparation.
+
+Technology selection and prototype implementation are still pending.
