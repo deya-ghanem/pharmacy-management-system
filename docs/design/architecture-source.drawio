@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36">
+  <diagram name="Sayfa -1" id="4pFoUjndHhY6sL6FbW1X">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;fontColor=#172B4D;fontSize=24;align=center;verticalAlign=middle;spacing=10;strokeColor=none;" value="&lt;b&gt;Pharmacy Management System — Proposed Architecture&lt;/b&gt;&lt;br&gt;Layered Windows desktop application | Initial deployment: one Windows PC" vertex="1">
+          <mxGeometry height="100" width="1700" x="-490" y="-1120" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#6B8FCB;fontColor=#172B4D;fontSize=18;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;Staff / Pharmacist&lt;/b&gt;&lt;br&gt;Administrator&lt;br&gt;User actions" vertex="1">
+          <mxGeometry height="170" width="265" x="-490" y="-815" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E4F2E3;strokeColor=#7EAD73;fontColor=#172B4D;fontSize=18;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;Presentation Layer&lt;/b&gt;&lt;br&gt;WPF screens&lt;br&gt;Search / Sales / Inventory" vertex="1">
+          <mxGeometry height="170" width="310" x="-150" y="-815" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4E4;strokeColor=#C56C65;fontColor=#172B4D;fontSize=18;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;Domain Logic&lt;/b&gt;&lt;br&gt;Medicine / Stock / Sale rules&lt;br&gt;Quantity checks / totals" vertex="1">
+          <mxGeometry height="180" width="310" x="250" y="-505" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F4F7;strokeColor=#777777;fontColor=#172B4D;fontSize=18;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;SQLite Database&lt;/b&gt;&lt;br&gt;Medicines / Sales&lt;br&gt;SaleItems / Users" vertex="1">
+          <mxGeometry height="180" width="305" x="710" y="-505" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A0A0A0;fontColor=#172B4D;fontSize=16;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;Failure handling&lt;/b&gt;&lt;br&gt;Insufficient stock or database error&lt;br&gt;Reject operation and roll back transaction&lt;br&gt;Return an error message to the UI" vertex="1">
+          <mxGeometry height="180" width="540" x="-490" y="-505" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#D0D5DD;fontColor=#172B4D;fontSize=18;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;Design boundary&lt;/b&gt;&lt;br&gt;All database access passes through the Data Access Layer.&lt;br&gt;No external API, cloud dependency, or multi-branch synchronization in the initial scope." vertex="1">
+          <mxGeometry height="125" width="1700" x="-490" y="-235" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;fontColor=#172B4D;fontSize=15;align=center;verticalAlign=middle;spacing=10;strokeColor=none;" value="Solid arrows show requests/data flow; return paths show results or operation status." vertex="1">
+          <mxGeometry height="50" width="1100" x="-190" y="-85" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-23" edge="1" parent="1" source="DF2jIPgehz6Pw0nyk9Py-14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475467;strokeWidth=2;endArrow=block;endFill=1;fontSize=15;fontColor=#344054;labelBackgroundColor=#FFFFFF;" target="DF2jIPgehz6Pw0nyk9Py-15" value="User actions">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-26" edge="1" parent="1" source="DF2jIPgehz6Pw0nyk9Py-16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475467;strokeWidth=2;endArrow=block;endFill=1;fontSize=15;fontColor=#344054;labelBackgroundColor=#FFFFFF;" target="DF2jIPgehz6Pw0nyk9Py-18" value="Business rules">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-27" edge="1" parent="1" source="DF2jIPgehz6Pw0nyk9Py-18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B54708;strokeWidth=2;endArrow=block;endFill=1;fontSize=15;fontColor=#344054;labelBackgroundColor=#FFFFFF;" target="DF2jIPgehz6Pw0nyk9Py-16" value="Validated result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-28" edge="1" parent="1" source="DF2jIPgehz6Pw0nyk9Py-17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475467;strokeWidth=2;endArrow=block;endFill=1;fontSize=15;fontColor=#344054;labelBackgroundColor=#FFFFFF;" target="DF2jIPgehz6Pw0nyk9Py-19" value="SQL / records">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-29" edge="1" parent="1" source="DF2jIPgehz6Pw0nyk9Py-16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#175CD3;strokeWidth=2;endArrow=block;endFill=1;fontSize=15;fontColor=#344054;labelBackgroundColor=#FFFFFF;" target="DF2jIPgehz6Pw0nyk9Py-19" value="Persist sale transaction">
+          <mxGeometry relative="1" x="0.0616" y="100" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-30" edge="1" parent="1" source="DF2jIPgehz6Pw0nyk9Py-17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#027A48;strokeWidth=2;endArrow=block;endFill=1;fontSize=15;fontColor=#344054;labelBackgroundColor=#FFFFFF;" target="DF2jIPgehz6Pw0nyk9Py-15" value="Search results / sale status">
+          <mxGeometry relative="1" x="0.1273" y="-100" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#D6B74F;fontColor=#172B4D;fontSize=18;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;Application Services&lt;/b&gt;&lt;br&gt;Use cases / validation&lt;br&gt;Authorization / orchestration" vertex="1">
+          <mxGeometry height="170" width="310" x="250" y="-815" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE5F5;strokeColor=#9B80B7;fontColor=#172B4D;fontSize=18;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;Data Access Layer&lt;/b&gt;&lt;br&gt;SQLite queries&lt;br&gt;Transaction handling" vertex="1">
+          <mxGeometry height="170" width="305" x="710" y="-815" as="geometry" />
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-25" edge="1" parent="1" source="DF2jIPgehz6Pw0nyk9Py-16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475467;strokeWidth=2;endArrow=block;endFill=1;fontSize=15;fontColor=#344054;labelBackgroundColor=#FFFFFF;" target="DF2jIPgehz6Pw0nyk9Py-17" value="Data requests">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DF2jIPgehz6Pw0nyk9Py-24" edge="1" parent="1" source="DF2jIPgehz6Pw0nyk9Py-15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475467;strokeWidth=2;endArrow=block;endFill=1;fontSize=15;fontColor=#344054;labelBackgroundColor=#FFFFFF;" target="DF2jIPgehz6Pw0nyk9Py-16" value="Commands">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
