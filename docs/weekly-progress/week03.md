@@ -3,7 +3,7 @@
 **Project:** Pharmacy Management System  
 **Student:** Deya Ghanem  
 **Repository:** https://github.com/deya-ghanem/pharmacy-management-system  
-**Status:** Draft package prepared; student review and GitHub push still required.
+**Status:** Week 3 design artifacts uploaded to GitHub. Final verification of the report, references, and commit evidence is pending.
 
 ## 1. Requirements-to-design traceability
 
@@ -41,7 +41,8 @@ Currency, tax and discount rules were not specified in Week 2 and should be conf
 Demonstrate a Windows desktop screen where a user searches a seeded medicine by name or barcode, selects it, enters quantity, confirms a test sale, and sees a saved sale plus reduced stock. Evidence: screenshot of the UI and database output before/after. If full integration takes longer, prove the transaction through a minimal UI or test harness.
 
 ## 6. References
-1. Microsoft Learn, WPF overview: https://learn.microsoft.com/en-us/dotnet/desktop-wpf/overview/index
+1. 1. Microsoft Learn, WPF overview:
+   https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/
 2. SQLite, SQLite Is Transactional: https://www.sqlite.org/transactional.html
 3. Microsoft .NET, releases and support: https://learn.microsoft.com/en-us/dotnet/core/releases-and-support
 
