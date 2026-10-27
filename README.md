@@ -22,15 +22,16 @@ The main target users are:
 
 Each user type will have different permissions according to their responsibilities.
 
-## Planned Technologies
+## Selected Technologies
 
 - **Platform:** Windows Desktop
-- **Programming Language:** To be determined
-- **GUI Framework:** To be determined
-- **Database:** To be determined
+- **Programming Language:** C#
+- **GUI Framework:** WPF
+- **Runtime:** Modern .NET
+- **Database:** SQLite
 - **Version Control:** Git and GitHub
 
-The initial version will target Windows. The system may be extended to other platforms in future development.
+These technologies are the current proposed baseline for the project and may be reassessed if requirements change.
 
 ## Planned Features
 
@@ -60,11 +61,35 @@ The initial version will target Windows. The system may be extended to other pla
 
 ## Current Status
 
-**Week 2 — Requirements Engineering and Planning**
+- Project definition and initial scope documented.
+- Functional and non-functional requirements documented.
+- Initial architecture and technical design documented in Week 3.
+- Implementation and testing will proceed incrementally according to the project milestones.
 
-- Defined preliminary functional and non-functional requirements.
-- Identified project scope, constraints, and assumptions.
-- Created initial user stories and acceptance criteria.
-- Created GitHub Issues for requirements documentation, technology comparison, and prototype/data model preparation.
+## System Architecture
 
-Technology selection and prototype implementation are still pending.
+The Pharmacy Management System is planned as a Windows desktop application using C# and WPF on modern .NET, with SQLite for local data storage.
+
+The proposed architecture consists of four logical layers:
+
+- **Presentation Layer:** Provides the user interface for medicine search, sales, and inventory management.
+- **Application Services Layer:** Coordinates application use cases and validation.
+- **Domain Logic Layer:** Applies business rules, validates sale quantities, checks stock availability, and calculates totals.
+- **Data Access Layer:** Handles database queries, persistence, and transaction management.
+
+SQLite stores medicine, sales, sale-item, and user records locally. During a sale, the system is designed to save the sale details and update stock within a single transaction. If the operation fails, the transaction should be rolled back to prevent inconsistent inventory data.
+
+### Design Artifacts
+
+- **Architecture Diagram:** `docs/design/architecture.png`
+- **Editable Architecture Diagram:** `docs/design/architecture-source.drawio`
+- **Technical Decisions:** `docs/design/design-decisions.md`
+- **Component Interfaces:** `docs/design/component-interfaces.md`
+- **Sale Flow:** `docs/design/sale-flow.md`
+- **Week 3 Progress Log:** `docs/weekly-progress/week03.md`
+
+### Initial Deployment Scope
+
+The initial version targets one Windows computer in a pharmacy. External APIs, cloud dependencies, and multi-branch synchronization are outside the initial scope.
+
+The architecture represents the proposed design. The full application is not claimed to be implemented at this stage.
