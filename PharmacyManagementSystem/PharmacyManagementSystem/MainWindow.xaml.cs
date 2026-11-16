@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
+using PharmacyManagementSystem.Data;
 
 namespace PharmacyManagementSystem
 {
@@ -13,33 +14,10 @@ namespace PharmacyManagementSystem
         {
             InitializeComponent();
 
-            medicines = new List<Medicine>
-            {
-                new Medicine
-                {
-                    Name = "Paracetamol",
-                    Barcode = "100001",
-                    Price = 25,
-                    Quantity = 100,
-                    ExpiryDate = "2027-06-15"
-                },
-                new Medicine
-                {
-                    Name = "Amoxicillin",
-                    Barcode = "100002",
-                    Price = 45,
-                    Quantity = 50,
-                    ExpiryDate = "2027-09-20"
-                },
-                new Medicine
-                {
-                    Name = "Ibuprofen",
-                    Barcode = "100003",
-                    Price = 30,
-                    Quantity = 75,
-                    ExpiryDate = "2028-01-10"
-                }
-            };
+            Database.Initialize();
+            Database.SeedMedicines();
+
+            medicines = Database.GetMedicines();
 
             dgMedicines.ItemsSource = medicines;
 
