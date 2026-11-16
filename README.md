@@ -93,3 +93,42 @@ SQLite stores medicine, sales, sale-item, and user records locally. During a sal
 The initial version targets one Windows computer in a pharmacy. External APIs, cloud dependencies, and multi-branch synchronization are outside the initial scope.
 
 The architecture represents the proposed design. The full application is not claimed to be implemented at this stage.
+## Launch Instructions
+
+### Requirements
+- Windows operating system
+- Visual Studio 2022 or later
+- .NET SDK compatible with the project
+- NuGet package restore support
+
+### Run the Application Using Visual Studio
+1. Clone or download the repository.
+2. Open `PharmacyManagementSystem.slnx` in Visual Studio.
+3. Allow Visual Studio to restore the NuGet packages.
+4. Set `PharmacyManagementSystem` as the startup project.
+5. Press **F5** or click **Start** to run the application.
+
+### Run Using the .NET CLI
+Open a terminal in the project directory and execute:
+
+```bash
+dotnet restore
+dotnet build
+dotnet run
+```
+
+### Database Initialization
+The application uses SQLite for local data storage.
+
+- The database is created automatically when the application starts.
+- The database file is stored in the user's local application data directory:
+  `%LOCALAPPDATA%/PharmacyManagementSystem/pharmacy.db`
+- Sample medicine records are inserted automatically when the database is empty.
+
+### Current Prototype Features
+- Search medicines by name.
+- Search medicines by barcode.
+- Display available medicine records.
+- Store medicine data locally using SQLite.
+
+**Note:** This is an initial working prototype. Sales management, inventory transactions, and other planned features have not yet been implemented.
