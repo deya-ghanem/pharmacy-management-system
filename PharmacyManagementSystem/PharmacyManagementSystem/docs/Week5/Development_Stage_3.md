@@ -34,11 +34,9 @@ The medicine management functionality was not connected to a complete sales work
 Implemented the CreateSale method using SQLite transactions. The method checks medicine availability, records the sale, saves its details, and updates the medicine quantity.
 
 ## Screenshot / Evidence
-To be added:
-- Sales interface.
-- Successful sale confirmation.
-- Medicine inventory after stock deduction.
-- Invalid sale quantity rejection.
+- [Successful Sale](Evidence/05_Successful_Sale.png)
+- [Stock Update](Evidence/06_Stock_Update.png)
+- [Invalid Sale](Evidence/07_Invalid_Sale.png)
 
 ## GitHub Commit Hash / URL
 To be added after committing the implementation.

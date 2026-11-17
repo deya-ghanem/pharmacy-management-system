@@ -31,8 +31,12 @@ The original prototype supported medicine searching but did not provide complete
 ## Solution
 Implemented AddMedicine, UpdateMedicine, and DeleteMedicine methods using parameterized SQLite commands and connected them to the WPF interface.
 
+
 ## Screenshot / Evidence
-To be added: Medicine management screenshots.
+- [Medicine List](Evidence/01_Medicine_List.png)
+- [Add Medicine](Evidence/02_Add_Medicine.png)
+- [Update Medicine](Evidence/03_Update_Medicine.png)
+- [Search Medicine](Evidence/04_Search_Medicine.png)
 
 ## GitHub Commit Hash / URL
 To be added after committing the implementation.
