@@ -33,15 +33,35 @@ Each user type will have different permissions according to their responsibiliti
 
 These technologies are the current proposed baseline for the project and may be reassessed if requirements change.
 
+## Implemented Features
+
+The following functionality is currently implemented and demonstrated:
+
+- Search medicines by name or barcode.
+- View medicine details, including price, quantity, and expiry date.
+- Add new medicine records.
+- Update existing medicine records.
+- Delete medicine records.
+- Validate medicine input fields.
+- Create a sale by selecting a medicine and entering a quantity.
+- Calculate the sale total based on the medicine price and quantity.
+- Save sales and sale-item records in SQLite.
+- Automatically update medicine stock after a successful sale.
+- Reject invalid sale quantities and sales exceeding available stock.
+- Use SQLite transactions during the sale workflow.
+
 ## Planned Features
 
-- Search for medicines by name or barcode.
-- View medicine details, including price, quantity, and expiry date when available.
-- Create sales transactions and calculate the total price.
-- Automatically update inventory after a confirmed sale.
-- Manage medicine records and stock quantities.
-- Provide low-stock and expiry alerts.
-- Generate basic sales and inventory reports.
+The following features remain part of the future development scope:
+
+- User authentication and role-based permissions.
+- Supplier management.
+- Customer or patient management.
+- Purchase management.
+- Low-stock and expiry alerts.
+- Sales and inventory reports.
+- Backup and restore functionality.
+- Additional systematic testing and performance evaluation.
 
 ## Scope
 
@@ -61,14 +81,35 @@ These technologies are the current proposed baseline for the project and may be 
 
 ## Current Status
 
-- Project definition and initial scope documented.
-- Functional and non-functional requirements documented.
+The project has progressed from the initial Week 4 medicine-search prototype to a working Week 5 core application.
+
+Completed milestones:
+
+- Project definition, scope, and requirements documented.
 - Initial architecture and technical design documented in Week 3.
-- Implementation and testing will proceed incrementally according to the project milestones.
+- Week 4: SQLite integration and medicine search by name or barcode.
+- Week 5 Stage 2: Medicine management operations, including add, update, delete, and search.
+- Week 5 Stage 3: Sales workflow integrated with SQLite inventory updates.
+- Medicine model separated into its own Models module.
+- Database operations organized in the Database class.
+- Input validation and error handling added to the main workflows.
+- Development records and screenshot evidence added under `docs/Week5/`.
+
+The application has passed the basic manual demonstrations performed during Week 5. Comprehensive testing, performance evaluation, and validation under broader conditions are planned for Week 6.
 
 ## System Architecture
 
-The Pharmacy Management System is planned as a Windows desktop application using C# and WPF on modern .NET, with SQLite for local data storage.
+The application currently uses:
+
+- **Presentation Layer:** WPF interface implemented in MainWindow.xaml.
+- **UI Coordination:** MainWindow.xaml.cs handles interface events, user input, and coordination of operations.
+- **Medicine Model:** Models/Medicine.cs represents medicine records.
+- **Data Access Layer:** Data/Database.cs handles SQLite initialization, medicine CRUD operations, and sales persistence.
+- **Database:** SQLite stores medicine records, sales, and sale items.
+
+The current implementation does not yet contain separate Application Services or Domain Logic layers. Some validation and workflow coordination remain in the window code-behind and database component. These layers may be introduced in a future refactoring stage.
+
+The sale workflow uses a database transaction to record the sale, store its items, and update medicine stock. If the operation fails, the transaction is rolled back.
 
 The proposed architecture consists of four logical layers:
 
@@ -131,4 +172,11 @@ The application uses SQLite for local data storage.
 - Display available medicine records.
 - Store medicine data locally using SQLite.
 
+### Development Documentation
+
+- Week 5 Stage 2: `PharmacyManagementSystem/docs/Week5/Development_Stage_2.md`
+- Week 5 Stage 3: `PharmacyManagementSystem/docs/Week5/Development_Stage_3.md`
+- Week 5 Evidence: `PharmacyManagementSystem/docs/Week5/evidence/`
+
+  
 **Note:** This is an initial working prototype. Sales management, inventory transactions, and other planned features have not yet been implemented.
